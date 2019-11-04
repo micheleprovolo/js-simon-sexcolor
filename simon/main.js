@@ -2,6 +2,7 @@
 // Dopo 30 secondi l’utente deve inserire un prompt alla volta i numeri che ha visto precedentemente.
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati;
 
+//array vuoto
 var numbers = []
 
 //ciclo che genera 5 numeri casuali da 1 a 100
@@ -11,11 +12,23 @@ while (numbers.length  < 5) {
 }
 console.log(numbers);
 
+
+//alert che recepisce i numeri casuali generati dentro l'array
 alert(numbers);
+
 
 var time = 30;
 
-var myinterval = setInterval(countdown, 300);
+var myinterval = setInterval(countdown, 100);
+
+
+//BLOCCO FUNZIONI
+//funzione che genera un numero casuale compreso fra un min e max
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 function countdown() {
     time = time - 1;
@@ -23,14 +36,27 @@ function countdown() {
     if(time == 0) {
         clearInterval(myinterval);
         var user = parseInt(prompt("Inserisci i numeri che hai memorizzato"));
+
     } else {
         console.log(time);
     }
 }
 
 
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+
+
+
+// var time = 30;
+
+// var myinterval = setInterval(countdown, 300);
+
+// function countdown() {
+//     time = time - 1;
+
+//     if(time == 0) {
+//         clearInterval(myinterval);
+//         var user = parseInt(prompt("Inserisci i numeri che hai memorizzato"));
+//     } else {
+//         console.log(time);
+//     }
+// }
