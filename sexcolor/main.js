@@ -6,9 +6,9 @@ var askSex = prompt("Sei maschio o femmina");
 
 document.getElementById("nome").innerHTML = "Ciao " + askName;
 
-if (askSex === "maschio") {
+if (askSex === "maschio" || askSex === "Maschio") {
     document.getElementById("nome").style.color = "blue";
 
-} else if (askSex === "femmina") {
+} else if (askSex === "femmina" || askSex === "Femmina") {
     document.getElementById("nome").style.color = "pink";
 }
