@@ -22,9 +22,6 @@ var user = 0;
 //prima di iniziare l'utente non ha ancora trovato nemmeno un numero
 var trovato = false;
 
-//pertanto il suo punteggio è 0
-var score = 0;
-
 //creo array vuoto da riempire con i numeri che l'utente ha memorizzato correttamente
 var numeriTrovati = [];
 
@@ -48,7 +45,7 @@ function countdown() {
         }
 
     }
-    console.log("Questi sono i numeri che hai azzeccato " + numeriTrovati);
+    console.log("Questi sono i numeri che hai azzeccato " + numeriTrovati + " ed hai così ottenuto " + numeriTrovati.length + " punti");
 
     if(numeriTrovati.length === numbers.length) {
         console.log("Hai indovinato tutti i numeri!");
